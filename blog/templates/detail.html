@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <article class="content">
+        <h1>{{ post.title }}</h1>
+
+        <time>{{ post.date_added }}</time> - <span>{{ post.category.title }}</span>
+
+        <p><strong>{{ post.intro }}</strong></p>
+
+        <a href="{% url 'front_page' %}">Return</a>
+    </article>
+{% endblock %}

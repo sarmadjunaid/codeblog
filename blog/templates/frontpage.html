@@ -8,6 +8,8 @@
             <time>{{ post.date_added }}</time>
 
             <p>{{ post.intro }}</p>
+
+            <a href="{% url 'detail' post.slug %}">Read more</a>
         </article>
         <br>
     {% endfor %}

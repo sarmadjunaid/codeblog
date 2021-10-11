@@ -12,3 +12,13 @@ def frontpage(request):
     }
 
     return render(request, 'frontpage.html', context)
+
+
+def detail(request, slug):
+    post = Post.objects.get(slug=slug)
+
+    context = {
+        'post': post
+    }
+
+    return render(request, 'detail.html', context)
