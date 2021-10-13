@@ -4,7 +4,7 @@
     <article class="content">
         <h1>{{ post.title }}</h1>
 
-        <time>{{ post.date_added }}</time> - <span>{{ post.category.title }}</span>
+        <time>{{ post.date_added|date:"d M, Y h:i" }}</time> - <a href="{% url 'category' post.category.slug %}">{{ post.category.title }}</a>
 
         <p><strong>{{ post.intro }}</strong></p>
 
